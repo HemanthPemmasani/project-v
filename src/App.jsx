@@ -7,6 +7,7 @@ import Careers from "./pages/careers/Careers.jsx";
 import HeadNavbar from "./pages/Header/HeaderNavbar.jsx";
 import Footer from "./pages/Footer/Footer.jsx";
 import AdminLayout from "./pages/admin/AdminLayout.jsx";
+import Services from "./pages/Services/Services.jsx";
 
 const MainLayout = () => {
   return (
@@ -28,26 +29,19 @@ const routes = createBrowserRouter([
     element: <MainLayout />,
     children: [
       {
-        path: "/",
-        element: <Navigate to="/Home" />,
-      },
-      {
-        path: "/Home",
+        path: "Home",
         element: <Home />,
         children: [],
       },
       {
-        path: "/AboutUs",
+        path: "AboutUs",
         element: <AboutUs />,
       },
       {
-        path: "/Careers",
+        path: "Careers",
         element: <Careers />,
       },
-      {
-        path: "/services/:id",
-        element: <Services />,
-      },
+      
     ],
   },
   {

@@ -13,8 +13,8 @@ const HeaderNavbar = () => {
   return (
     <div style={headNavbar}>
       <NavLink to="/">Home</NavLink>
-      <NavLink to="/AboutUs">About US</NavLink>
-      <NavLink to="/Careers">Careers</NavLink>
+      <NavLink to="/main/AboutUs">About US</NavLink>
+      <NavLink to="/main/Careers">Careers</NavLink>
     </div>
   );
 };
