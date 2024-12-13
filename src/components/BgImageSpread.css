@@ -1,0 +1,33 @@
+.slick-track {
+  display: flex !important; /* Ensure slick-track uses flexbox layout */
+  align-items: center; /* Vertically align the slides */
+  justify-content: center; /* Center the slides */
+}
+
+.slick-slide {
+  display: inline-block !important; /* Make sure slides are inline-block */
+  height: 100vh !important; /* Ensure slides fill the height */
+  width: 100vw !important; /* Ensure slides fill the width */
+  position: relative; /* Position for background images */
+}
+
+/* Optional: Customize the dots and arrows if needed */
+.slick-prev,
+.slick-next {
+  z-index: 1; /* Make navigation arrows visible */
+}
+
+/* Position dots at the bottom */
+.slick-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* Custom styling for the navigation dots */
+.slick-dots li button:before {
+  font-size: 14px;
+  color: white; /* Change dot color if needed */
+}

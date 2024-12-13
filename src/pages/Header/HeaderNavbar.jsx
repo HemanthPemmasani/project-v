@@ -1,21 +1,38 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { AppBar, Toolbar, Typography, Button } from "@mui/material";
 
 const HeaderNavbar = () => {
-  const headNavbar = {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "10px 20px",
-    backgroundColor: "#FFF",
-    color: "#333",
-  };
   return (
-    <div style={headNavbar}>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/main/AboutUs">About US</NavLink>
-      <NavLink to="/main/Careers">Careers</NavLink>
-    </div>
+    <AppBar
+      position="fixed"
+      sx={{
+        top: 20,
+        right: 100,
+        zIndex: 1,
+        borderRadius: "50%  ",
+        width: "50%",
+        backgroundColor: "rgba(71, 183, 74)",
+      }}
+    >
+      <Toolbar
+        style={{
+          backgroundColor: "inherit",
+          display: "flex",
+          justifyContent: "space-between",
+        }}
+      >
+        <NavLink style={{ color: "white" }} to="/">
+          Home
+        </NavLink>
+        <NavLink style={{ color: "white" }} to="/main/AboutUs">
+          About US
+        </NavLink>
+        <NavLink style={{ color: "white" }} to="/main/Careers">
+          Careers
+        </NavLink>
+      </Toolbar>
+    </AppBar>
   );
 };
 

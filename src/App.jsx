@@ -8,11 +8,13 @@ import HeadNavbar from "./pages/Header/HeaderNavbar.jsx";
 import Footer from "./pages/Footer/Footer.jsx";
 import AdminLayout from "./pages/admin/AdminLayout.jsx";
 import Services from "./pages/Services/Services.jsx";
+import "./App.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const MainLayout = () => {
   return (
     <div>
-      <HeadNavbar />
       <Outlet />
       <Footer />
     </div>
@@ -29,6 +31,10 @@ const routes = createBrowserRouter([
     element: <MainLayout />,
     children: [
       {
+        path: "/main",
+        element: <Navigate to="/main/Home" />,
+      },
+      {
         path: "Home",
         element: <Home />,
         children: [],
@@ -41,7 +47,6 @@ const routes = createBrowserRouter([
         path: "Careers",
         element: <Careers />,
       },
-      
     ],
   },
   {
